@@ -66,16 +66,29 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
 
+/* key combination for command */
+#define IS_COMMAND() ( \
+    keyboard_report->mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT)) \
+)
+
+/* Custom config */
+#define TAPPING_TERM 250 // how long before a tap becomes a hold
+/* #define RETRO_TAPPING // tap anyway, even after TAPPING_TERM, if there was no other key interruption between press and release */
+/* https://docs.qmk.fm/features/advanced-keycodes#permissive-hold */
+/* #define PERMISSIVE_HOLD */
+
+#define PREVENT_STUCK_MODIFIERS // when switching layers, this will release all mods
+
 /*
  * Feature disable options
  *  These options are also useful to firmware size reduction.
  */
 
 /* disable debug print */
-//#define NO_DEBUG
+#define NO_DEBUG
 
 /* disable print */
-//#define NO_PRINT
+#define NO_PRINT
 
 /* disable action features */
 //#define NO_ACTION_LAYER

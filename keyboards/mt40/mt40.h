@@ -55,6 +55,4 @@
 #define LAYOUT LAYOUT_planck_mit
 #define LAYOUT_kc_planck_mit LAYOUT_kc
 
-
-
 #endif
